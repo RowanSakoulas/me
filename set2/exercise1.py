@@ -17,16 +17,20 @@ print("hello! Let's get started")  # it printed "hello! Let's get started"
 
 some_words = ["what", "does", "this", "line", "do", "?"]
 
+#print  the words in some_words
 for word in some_words:
-    print(word)
+    print(word) #it printed each of the words once
 
+#create a variable for some_words
 for x in some_words:
-    print(x)
+    print(x) #it did te same thing
 
-print(some_words)
+#prints all the words
+print(some_words) #it printed them all
 
+#print wors with more than 3 characters
 if len(some_words) > 3:
-    print("some_words contains more than 3 words")
+    print("some_words contains more than 3 words") #it just printed whats in the brackets
 
 
 def usefulFunction():
