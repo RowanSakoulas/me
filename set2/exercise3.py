@@ -78,8 +78,13 @@ def loops_1c(number_of_items=5, symbol="#"):
     Remember that you're being passed arguments here. Don't hard code the number
     or the symbol, let it be whatever it wants to be.
     """
-    return None
-
+    hash_list = []
+    i = 0
+    while i < number_of_items:
+        hash_list.append(symbol)
+        i+= 1
+    return hash_list
+print(loops_1c())
 
 def loops_2():
     """Make a big square starfield.
@@ -99,7 +104,12 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    return None
+    star_list = []
+    for i in range(10):
+        star_list.append("*")
+    starfield_list = []
+    starfield_list.extend([star_list for i in range(10)])
+    return starfield_list
 
 
 def loops_3():
@@ -123,7 +133,9 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    return None
+    number_list = []
+    for i in range(10):
+        return number_list
 
 
 def loops_4():
@@ -143,8 +155,6 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    return None
-
 
 def loops_5():
     """Make the coordinates of the block.
@@ -220,7 +230,7 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    return None
+
 
 
 def little_printer(some_kind_of_list, exercise_name):
