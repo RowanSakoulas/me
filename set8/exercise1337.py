@@ -93,8 +93,7 @@ def n_counter(search_for_this, input_list=[1, 4, 1, 5, 1, 1]) -> int:
     """Count the number of times search_for_this shows up in the input_list.
     Return an integer.
     """
-    count = None
-
+    count = input_list.count(search_for_this)
     return count
 
 
@@ -117,8 +116,15 @@ def fizz_buzz() -> List:
          'FizzBuzz', 16, 17, ...]
     """
     fizz_buzz_list = []
-    # your code here
-
+    for i in range(1,101):
+        if i % 15 == 0:
+            fizz_buzz_list.append("FizzBuzz")
+        elif i % 5 == 0:
+            fizz_buzz_list.append("Buzz")
+        elif i % 3 == 0:
+            fizz_buzz_list.append("Fizz")
+        else:
+            fizz_buzz_list.append(int(i))
     return fizz_buzz_list
 
 
@@ -133,8 +139,11 @@ def set_it_on_fire(input_string="very naughty boy") -> str:
     TIP: consider using the 'join' method in Python.
     TIP: make sure that you have a 🔥 on both ends of the string.
     """
-
-    return None
+    fire = input_string.upper()
+    fireemoji = "🔥"
+    firelist = list(fire)
+    firestring = fireemoji.join(firelist)
+    return fireemoji + firestring + fireemoji
 
 
 def pet_filter(letter="a") -> List:
