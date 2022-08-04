@@ -224,6 +224,7 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
+
     return None
 
 
@@ -248,7 +249,19 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
+def loops_7():
+    columns = []
+    for x in range(5):
+        rows = []
+        for y in range(9):
+            if abs(y-4) <= x:
+                rows.append('*')
+            else:
+                rows.append(' ')
+        columns.append(rows)
 
+    print(columns)
+    return columns
 
 
 def little_printer(some_kind_of_list, exercise_name):
