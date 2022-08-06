@@ -133,9 +133,15 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    number_list = []
-    for i in range(10):
-        return number_list
+    rising = []
+    temp_rising = []
+
+    for j in range(10):
+        for i in range(10):
+            temp_rising.append(str(j))
+        rising.append(temp_rising)
+        temp_rising = []
+    return rising
 
 
 def loops_4():
@@ -155,6 +161,11 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
+    rising = []
+    for i in range(10):
+        rising.append(10)
+        return rising
+print(loops_4())
 
 def loops_5():
     """Make the coordinates of the block.

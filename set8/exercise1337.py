@@ -11,7 +11,10 @@ import time
 
 def string_please() -> str:
     """Returns a string, anything you like."""
-    return None
+    
+    def string_please():
+        string_please = "😀"
+    return string_please
 
 
 def list_please() -> list:
