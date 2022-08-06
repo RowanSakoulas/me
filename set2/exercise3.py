@@ -84,7 +84,6 @@ def loops_1c(number_of_items=5, symbol="#"):
         hash_list.append(symbol)
         i+= 1
     return hash_list
-print(loops_1c())
 
 def loops_2():
     """Make a big square starfield.
@@ -104,11 +103,12 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    star_list = []
-    for i in range(10):
-        star_list.append("*")
     starfield_list = []
-    starfield_list.extend([star_list for i in range(10)])
+    for i in range(10):
+        star_list = []
+        for j in range(10):
+            star_list.append("*")
+        starfield_list.append(star_list)
     return starfield_list
 
 
@@ -133,6 +133,7 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
+<<<<<<< HEAD
     rising = []
     temp_rising = []
 
@@ -143,6 +144,15 @@ def loops_3():
         temp_rising = []
     return rising
 
+=======
+    bignumber_list = []
+    for i in range(10):
+        number_list = []
+        for j in range(10):
+            number_list.append(str(i))
+        bignumber_list.append(number_list)
+    return bignumber_list
+>>>>>>> 7334e6dd5c587a35e8cb39ae5314b8984c3dfd00
 
 def loops_4():
     """Make a block of numbers that rises left to right.
@@ -161,11 +171,21 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
+<<<<<<< HEAD
     rising = []
     for i in range(10):
         rising.append(10)
         return rising
 print(loops_4())
+=======
+    bignumber_list = []
+    for i in range(10):
+        number_list = []
+        for j in range(0,10):
+            number_list.append(str(j))
+        bignumber_list.append(number_list)
+    return bignumber_list
+>>>>>>> 7334e6dd5c587a35e8cb39ae5314b8984c3dfd00
 
 def loops_5():
     """Make the coordinates of the block.
@@ -194,7 +214,15 @@ def loops_5():
         f"There are {num_bottles} green bottles"
     you'll come to see the pros and cons of each over time.
     """
-    return None
+
+    block_list = []
+    for i in range(10):
+        for j in range(5):
+            x = "i" + str(i)
+            y = "j" + str(j)
+            block_list.append((x,y))
+    return block_list
+
 
 
 def loops_6():
@@ -217,6 +245,7 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
+
     return None
 
 
@@ -241,7 +270,19 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
+def loops_7():
+    columns = []
+    for x in range(5):
+        rows = []
+        for y in range(9):
+            if abs(y-4) <= x:
+                rows.append('*')
+            else:
+                rows.append(' ')
+        columns.append(rows)
 
+    print(columns)
+    return columns
 
 
 def little_printer(some_kind_of_list, exercise_name):
