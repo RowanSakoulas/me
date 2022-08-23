@@ -14,18 +14,16 @@ import requests
 from typing import Dict, List
 
 
-<<<<<<< HEAD
 def string_please() -> str:
     """Returns a string, anything you like."""
     
     def string_please():
         string_please = "😀"
     return string_please
-=======
+
 def give_me_five() -> int:
     """Returns the integer five."""
->>>>>>> 7334e6dd5c587a35e8cb39ae5314b8984c3dfd00
-
+    
     the_answer = 5
     return the_answer
 
