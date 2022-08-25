@@ -40,6 +40,7 @@ def get_some_details():
     json_data = open(LOCAL + "/lazyduck.json").read()
 
     data = json.loads(json_data)
+
     return {"lastName": None, "password": None, "postcodePlusID": None}
 
 
@@ -77,9 +78,29 @@ def wordy_pyramid():
     ]
     TIP: to add an argument to a URL, use: ?argName=argVal e.g. &wordlength=
     """
-    pyramid = []
+    baseURL = (
+        "https://us-central1-waldenpondpress.cloudfunctions.net/"
+        "give_me_a_word?wordlength={length}"
+    )
+    pyramid_list = []
+    for i in range(3, 21, 2):
+        url = baseURL.format(length=i)
+        r = requests.get(url)
+        if r.status_code is 200:
+            message = r.text
+            pyramid_list.append(message)
+        else:
+            print("failed a request", r.status_code, i)
+    for i in range(20, 3, -2):
+        url = baseURL.format(length=i)
+        r = requests.get(url)
+        if r.status_code is 200:
+            message = r.text
+            pyramid_list.append(message)
+        else:
+            print("failed a request", r.status_code, i)
 
-    return pyramid
+    return pyramid_list
 
 
 def pokedex(low=1, high=5):

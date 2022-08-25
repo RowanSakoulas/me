@@ -133,7 +133,6 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-<<<<<<< HEAD
     rising = []
     temp_rising = []
 
@@ -144,7 +143,6 @@ def loops_3():
         temp_rising = []
     return rising
 
-=======
     bignumber_list = []
     for i in range(10):
         number_list = []
@@ -152,7 +150,7 @@ def loops_3():
             number_list.append(str(i))
         bignumber_list.append(number_list)
     return bignumber_list
->>>>>>> 7334e6dd5c587a35e8cb39ae5314b8984c3dfd00
+
 
 def loops_4():
     """Make a block of numbers that rises left to right.
@@ -171,13 +169,12 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-<<<<<<< HEAD
+
     rising = []
     for i in range(10):
         rising.append(10)
         return rising
-print(loops_4())
-=======
+
     bignumber_list = []
     for i in range(10):
         number_list = []
@@ -185,7 +182,7 @@ print(loops_4())
             number_list.append(str(j))
         bignumber_list.append(number_list)
     return bignumber_list
->>>>>>> 7334e6dd5c587a35e8cb39ae5314b8984c3dfd00
+
 
 def loops_5():
     """Make the coordinates of the block.
